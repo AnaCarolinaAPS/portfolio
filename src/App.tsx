@@ -1,33 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Computer from './assets/computer.png';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <> 
+      <div className="row">
+        <div className="col-6">
+          <h1 className='text-3xl titulo'>Olá! Sou <br/><span className='primary'>Ana Carolina</span></h1>
+          <h2 className='text-xl subtitulo secondary'>Desenvolvedora Full Stack</h2>
+          <p className='text-lg'>
+            Desenvolvedora Full Stack com experiência em sistemas ERP e vitrines virtuais, com forte atuação em PHP (Laravel) e bancos de dados MySQL. Atualmente ampliando conhecimentos em frameworks modernos como React e Vue.js para retomar atuação na área de programação.
+          </p>
+        </div>
+        <div className="col-6">
+          <img src={Computer} alt="" className='responsive-img'/>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
