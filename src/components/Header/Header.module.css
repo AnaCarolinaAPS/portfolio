@@ -1,0 +1,45 @@
+.header {
+  background-color: rgba(255, 255, 255, 0.1); /* branco transparente */
+  backdrop-filter: blur(6px); /* deixa o fundo "opaco" e elegante */
+  padding: 1rem 3rem;
+  /* border-bottom: 1px solid #ddd; */
+  position: fixed; /* fixa no topo */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* garante que fique por cima de outros elementos */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: var(--gray100);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navlinks a:hover {
+  color: var(--primary);
+}
+
+.active {
+  color: var(--secondary) !important;
+  font-weight: bold;
+  /* border-bottom: 2px solid #007bff; */
+}
