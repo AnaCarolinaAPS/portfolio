@@ -25,24 +25,82 @@
   font-size: var(--font-xl);
 }
 
-.navlinks {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
 
-.navlinks a {
+.nav-links a {
   text-decoration: none;
   color: var(--gray100);
   font-size: var(--font-lg);
   font-weight: bold;
+  position: relative;
+  padding-bottom: 4px; /* espaço para o sublinhado */
 }
 
-.navlinks a:hover {
-  color: var(--primary);
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
 }
 
 .active {
   color: var(--secondary) !important;  
-  border-bottom: 2px solid var(--primary);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.toggleButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--gray100);
+}
+
+/* 🔽 Responsivo: esconde o menu normal e mostra hambúrguer */
+@media (max-width: 768px) {
+  .toggleButton {
+    display: block;
+    font-size: var(--font-lg);
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--background-hamburguer);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
 }
