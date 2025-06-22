@@ -1,0 +1,47 @@
+.text-sm {
+  font-size: var(--font-sm); 
+}
+
+.text-md {
+  font-size: var(--font-md); 
+}
+
+.text-lg {
+  font-size: var(--font-lg); 
+}
+
+.text-xl {
+  font-size: var(--font-xl); 
+}
+
+.text-2xl {
+  font-size: var(--font-2xl); 
+}
+
+.text-3xl {
+  font-size: var(--font-3xl); 
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-primary{
+  color: var(--primary);
+}
+
+.text-secondary{
+  color: var(--secondary);
+}
+
+.heading-main {
+  line-height: 1.1;
+  margin: 25px 0px;
+}
+
+.heading-sub {
+  line-height: 1.1;
+  margin: 20px 0px;
+}
