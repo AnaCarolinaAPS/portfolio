@@ -52,3 +52,7 @@ button {
   cursor: pointer;
   font: inherit;
 }
+
+section {
+  /* min-height: 100vh; */
+}
