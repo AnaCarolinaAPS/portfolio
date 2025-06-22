@@ -1,4 +1,5 @@
 import styles from './ProjectCard.module.css';
+import { Link } from 'react-router-dom';
 
 type Props = {
     image: string,
@@ -19,9 +20,9 @@ const ProjectCard = ({ image, title, description, detailsLink }: Props) => {
                 <h3 className={styles.cardTitle}>{title}</h3>
                 <p className={styles.cardDescription}>{description}</p>
                 <div className={styles.cardLinks}>
-                    <a href={detailsLink} className={styles.cardButton}>
+                    <Link to={detailsLink} className={styles.cardButton}>
                         + Detalhes
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
