@@ -4,7 +4,7 @@ function Sobre() {
     <> 
       <div className="row">
         <div className="col">
-          <h1 className='text-3xl titulo secondary'>Sobre</h1>
+          <h1 className='text-3xl heading-main text-secondary'>Sobre</h1>
         </div>
       </div>
     </>

@@ -1,0 +1,37 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 1;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.container {
+    padding-top: var(--menu-height); /* tamanho do menu fixo no topo */
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+
+.v-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha no eixo vertical */
+    height: calc(100vh - var(--menu-height)); /* 100% da tela - tamanho do menu fixo no topo */
+}
+
+/* 🔽 Em telas menores que 768px, as colunas ocupam 100% */
+@media (max-width: 767px) {
+    .col-6 {
+        width: 100%;
+    }
+    .container {
+        padding-top: 15vh !important;
+    }
+}

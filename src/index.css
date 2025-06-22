@@ -1,82 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
 @import './styles/variables.css';
-
-body {
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  background-color: var(--background-color);
-  color: var(--gray100);
-}
-
-.primary{
-  color: var(--primary);
-}
-
-.secondary{
-  color: var(--secondary);
-}
-
-.responsive-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.text-sm {
-  font-size: var(--font-sm); 
-}
-
-.text-md {
-  font-size: var(--font-md); 
-}
-
-.text-lg {
-  font-size: var(--font-lg); 
-}
-
-.text-xl {
-  font-size: var(--font-xl); 
-}
-
-.text-2xl {
-  font-size: var(--font-2xl); 
-}
-
-.text-3xl {
-  font-size: var(--font-3xl); 
-}
-
-.titulo {
-  line-height: 1.1;
-  margin: 25px 0px;
-}
-
-.subtitulo {
-  line-height: 1.1;
-  margin: 20px 0px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col {
-  padding-left: 15px;
-  padding-right: 15px;
-  flex: 1;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-/* 🔽 Em telas menores que 768px, as colunas ocupam 100% */
-@media (max-width: 767px) {
-  .col-6 {
-    width: 100%;
-  }
-}
+@import './styles/base.css';
+@import './styles/layout.css';
+@import './styles/utilities.css';
+@import './styles/components.css';
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
