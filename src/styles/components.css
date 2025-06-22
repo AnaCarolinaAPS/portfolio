@@ -1,0 +1,99 @@
+.sobremim-icon {
+    max-width: 100%;
+    width: var(--icon-md-w);
+    height: var(--icon-md-h);
+    will-change: filter;
+    transition: filter 300ms;
+    filter: brightness(0) saturate(100%) invert(99%) sepia(22%) saturate(77%) hue-rotate(270deg) brightness(112%) contrast(90%);
+    transition: transform 0.3s ease;    
+}
+
+.sobremim-icon:hover {    
+    filter: drop-shadow(0 0 2em var(--primary))
+            brightness(0) saturate(100%) invert(76%) sepia(23%) saturate(7372%) hue-rotate(144deg) brightness(100%) contrast(106%);
+    transform: scale(1.05);
+}
+
+.habilidade {
+    display: flex;    
+}
+
+.habilidade-kit {
+    font-size: var(--font-lg); 
+    text-align: center;
+    padding: 0px 15px;
+}
+
+.habilidade-icon {
+    max-width: 100%;
+    width: var(--icon-xl-w);
+    height: var(--icon-xl-h);
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.habilidade-icon:hover {    
+    filter: drop-shadow(0 0 2em var(--primary));
+}
+
+.section-divider {
+    height: 2px;
+    width: 80%;
+    background: linear-gradient(to right, var(--primary), var(--secondary)); /* ou qualquer cor */
+    margin: 5rem auto; /* Centraliza horizontalmente */
+}
+
+.btn-download {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 6px;
+    color: var(--gray100);
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--secondary);
+    transition: width 0.4s ease;
+    z-index: 0;
+}
+
+.btn-download:hover::before {
+    width: 100%;
+}
+
+.btn-download span,
+.btn-download img {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease, filter 0.4s ease;
+}
+
+.btn-download:hover {
+    color: var(--gray100);
+    border-color: var(--secondary);
+}
+
+.btn-download:hover span {
+    color: var(--gray100);
+}
+
+.btn-download svg {
+    position: relative;
+    z-index: 1;
+    transition: stroke 0.4s ease;
+}
