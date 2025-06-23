@@ -1,10 +1,10 @@
-import Computer from '../assets/computer.png';
-import resumoData from '../data/resumo';
-import habilidadeData from '../data/habilidades';
-import sobremimData from '../data/sobremim';
-import projetosData from '../data/projetos';
-import ProjectCard from '../components/ProjectCard/ProjectCard';
 import { NavLink } from 'react-router-dom';
+import Computer from '../assets/computer.png';
+import resumoData from '../data/resumo.ts';
+import habilidadeData from '../data/habilidades.ts';
+import sobremimData from '../data/sobremim.ts';
+import projetosData from '../data/projetos.ts';
+import ProjectCard from '../components/ProjectCard/ProjectCard';
 
 function Home() {
 
@@ -54,7 +54,7 @@ function Home() {
                 <div className="row text-center">
                     <div className="col">
                         <h2 className='text-3xl text-primary mb-5'>Sobre Mim</h2>
-                        {paragrafos.map((paragrafo, index) => (
+                        {paragrafos.map((paragrafo: string, index: number) => (
                             <p key={index} className="text-lg text-justify">{paragrafo}</p>
                         ))}
                     </div>       
