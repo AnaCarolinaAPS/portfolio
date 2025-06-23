@@ -1,39 +1,21 @@
 import { NavLink } from 'react-router-dom';
 import Computer from '../assets/computer.png';
-import resumoData from '../data/resumo.ts';
-import habilidadeData from '../data/habilidades.ts';
+import resumoData from '../data/resumo';
+import type { ResumoDataType } from '../data/resumo';
+import habilidadeData from '../data/habilidades';
+import type { HabilidadeDataType } from '../data/habilidades';
+import type { TecnologiasItemType } from '../data/habilidades';
 import sobremimData from '../data/sobremim.ts';
-import projetosData from '../data/projetos.ts';
+import type { ContatoItemType } from '../data/sobremim';
+import projetosData from '../data/projetos'; // ou o caminho correto
+import type { ProjetosDataType } from '../data/projetos';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
 
 function Home() {
 
     const paragrafos: string[] = sobremimData.resumo.split('\n');
     const projetosDestaque = projetosData.slice(0, 3); // Coleção dos 3 primeiros projetos (DESTAQUE)
-    
-    interface ContatoItem {
-        nome: string;
-        link: string;
-        icone: string;
-    }
-
-    interface HabilidadeItem {
-        nome: string;
-        icone: string;
-    }
-
-    interface HabilidadeCategoria {
-        categoria: string;
-        itens: HabilidadeItem[];
-    }
-
-    interface ProjetosDataType {
-        id: string;
-        titulo: string;
-        imagem: string;
-        resumo: string;
-        descricao: string;
-    }
+    const dados: ResumoDataType = resumoData;
     
     return (
         <> 
@@ -86,7 +68,7 @@ function Home() {
                 </div>
                 <div className="row mt-4">
                     <div className="col-12 align-center">
-                        {sobremimData.itens.map(( item: ContatoItem , index: number) => (
+                        {sobremimData.itens.map(( item: ContatoItemType , index: number) => (
                             <div key={index} className="sobremim-icon ml-2 text-primary">
                                 <a href={item.link} target="_blank"><img src={item.icone} /></a>
                             </div>
@@ -101,13 +83,13 @@ function Home() {
                         <h2 className='text-3xl text-secondary mb-5'>Habilidades</h2>
                     </div>       
                 </div>
-                {habilidadeData.map(( hab: HabilidadeCategoria, index: number) => (
+                {habilidadeData.map(( hab: HabilidadeDataType, index: number) => (
                     <div key={index} className="row mt-5">
                         <div className="col-6 mb-4">
                             <h2 className='text-xl text-uppercase'>{hab.categoria}</h2>
                         </div>
                         <div className="col-6 habilidade">
-                            {hab.itens.map((item: HabilidadeItem, i) => (
+                            {hab.itens.map((item: TecnologiasItemType, i) => (
                                 <div key={i} className="habilidade-kit">
                                     <img src={item.icone} alt={item.nome} className="habilidade-icon mb-1" />
                                     <span>{item.nome}</span>
