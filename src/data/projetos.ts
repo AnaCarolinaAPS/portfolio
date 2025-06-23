@@ -1,4 +1,18 @@
-const projetosData = [
+export interface TecnologiasItemType {
+    nome: string;
+    icone: string;
+}
+
+export interface ProjetosDataType {
+    id: string;
+    titulo: string;
+    imagem: string;
+    resumo: string;
+    descricao: string;
+    tecnologias: TecnologiasItemType[];
+}
+
+const projetosData: ProjetosDataType[] = [
     {
         id: "powertrade",
         titulo: "PowerTrade.py",

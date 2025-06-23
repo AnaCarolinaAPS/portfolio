@@ -1,4 +1,14 @@
-const habilidadeData = [
+export interface TecnologiasItemType {
+    nome: string;
+    icone: string;
+}
+
+export interface HabilidadeDataType {
+    categoria: string;
+    itens: TecnologiasItemType[];
+}
+
+const habilidadeData: HabilidadeDataType[] = [
     {
         categoria: "FrontEnd",
         itens: [
