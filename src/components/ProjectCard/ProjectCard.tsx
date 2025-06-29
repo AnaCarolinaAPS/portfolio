@@ -1,5 +1,6 @@
 import styles from './ProjectCard.module.css';
-import { Link } from 'react-router-dom';
+import Botao from '../Botao/Botao.tsx';
+import Card from '../Card/Card.tsx';
 
 type Props = {
     image: string,
@@ -9,10 +10,8 @@ type Props = {
 }
 
 const ProjectCard = ({ image, title, description, detailsLink }: Props) => {
-  return (
-    <div className={styles.projectCard} data-aos="fade-up-right" data-aos-duration="1000">
-        <div className={styles.cardInner}>
-            <div className={styles.cardOverlay} />
+    return (
+        <Card style={{ maxWidth: '95%' , height: '100%'}}>
             <div className={styles.cardContent}>
                 <div className={styles.cardImage}>
                     <img src={image} alt={title} />
@@ -20,14 +19,13 @@ const ProjectCard = ({ image, title, description, detailsLink }: Props) => {
                 <h3 className={styles.cardTitle}>{title}</h3>
                 <p className={styles.cardDescription}>{description}</p>
                 <div className={styles.cardLinks}>
-                    <Link to={detailsLink} className={styles.cardButton}>
-                        + Detalhes
-                    </Link>
+                    <Botao href={detailsLink} className="btn-primary" asLink>
+                        <span>+ Detalhes</span>
+                    </Botao>
                 </div>
             </div>
-        </div>
-    </div>
-  );
+        </Card>
+    );
 };
 
 export default ProjectCard;
