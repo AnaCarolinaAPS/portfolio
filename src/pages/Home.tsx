@@ -35,7 +35,7 @@ function Home() {
             <section className="sobremim">
                 <div className="row text-center">
                     <div className="col">
-                        <h2 className='text-3xl text-primary mb-5'>Sobre Mim</h2>
+                        <h2 className='text-3xl text-primary mb-6'>Sobre Mim</h2>
                         {paragrafos.map((paragrafo: string, index: number) => (
                             <p key={index} className="text-lg text-justify">{paragrafo}</p>
                         ))}
@@ -43,7 +43,7 @@ function Home() {
                 </div>
                 <div className="row">
                     <div className="col-12 align-center">
-                        <Botao href={sobremimData.linkcv} className="btn-secondary" newTab>
+                        <Botao href={sobremimData.linkcv} className="btn-secondary" newTab size="grande">
                             <>
                                 <span>Baixar CV</span>
                                 <svg
@@ -68,7 +68,7 @@ function Home() {
                         </Botao>
                     </div>
                 </div>
-                <div className="row mt-4">
+                <div className="row mt-5">
                     <div className="col-12 align-center">
                         {sobremimData.itens.map(( item: ContatoItemType , index: number) => (
                             <div key={index} className="sobremim-icon ml-2 text-primary">
@@ -82,11 +82,11 @@ function Home() {
             <section className="habilidades">
                 <div className="row text-center">
                     <div className="col">
-                        <h2 className='text-3xl text-secondary mb-5'>Habilidades</h2>
+                        <h2 className='text-3xl text-secondary mb-6'>Habilidades</h2>
                     </div>       
                 </div>
                 {habilidadeData.map(( hab: HabilidadeDataType, index: number) => (
-                    <div key={index} className="row mt-5">
+                    <div key={index} className="row mt-6">
                         <div className="col-6 mb-4">
                             <h2 className='text-xl text-uppercase'>{hab.categoria}</h2>
                         </div>
@@ -105,13 +105,13 @@ function Home() {
             <section className="projetos">
                 <div className="row text-center">
                     <div className="col">
-                        <h2 className='text-3xl text-primary mb-5'>Projetos</h2>
+                        <h2 className='text-3xl text-primary mb-6'>Projetos</h2>
                     </div>       
                 </div>
 
                 <div className="row text-center">
                     {projetosDestaque.map((proj: ProjetosDataType, index: number) => (
-                        <div className="col-4 mb-4" key={index}>
+                        <div className="col-4 mb-5" key={index}>
                             <ProjectCard
                                 key={proj.id}
                                 image={proj.imagem}
@@ -123,9 +123,9 @@ function Home() {
                     ))}   
                 </div>
 
-                <div className="row text-center mt-3 mb-5">
+                <div className="row text-center mt-4 mb-6">
                     <div className="col-12">
-                        <Botao href="/projetos" className="btn-secondary" asLink>
+                        <Botao href="/projetos" className="btn-secondary" asLink size='medio'>
                             <span>Todos os Projetos</span>
                         </Botao>
                     </div>

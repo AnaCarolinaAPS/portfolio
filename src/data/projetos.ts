@@ -45,6 +45,7 @@ const projetosData: ProjetosDataType[] = [
         ],
         links: [
             { text: "Git Hub", href: "https://github.com/AnaCarolinaAPS/powertradesys", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+            { text: "Live Demo", href: "https://github.com/AnaCarolinaAPS/powertradesys", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
         ],
     },
     {

@@ -22,16 +22,18 @@ function ProjetoDetalhes() {
                 <h3 className="text-lg text-secondary mb-3">{projeto.status}</h3>
                 <p className="text-xl">{projeto.resumo}</p>
                 
-                <div className="row mt-3 mb-3">
+                <div className="row mt-4 mb-4">
                     {projeto.links.map((item: LinksItemType, i) => (
-                        <Botao key={i} href={item.href} className="btn-secondary" newTab>
-                            <>
-                                <span>{item.text}</span>
-                            </>
-                        </Botao>
+                        <div className="mr-3">
+                            <Botao key={i} href={item.href} className="btn-secondary" newTab size="grande">
+                                <>
+                                    <span>{item.text}</span>
+                                </>
+                            </Botao>
+                        </div>
                     ))} 
                 </div>
-                <div className="row mt-3 mb-3">
+                <div className="row mt-4 mb-4">
                     <h2 className="text-xl text-secondary mb-3 mr-3">Tecnologias</h2>
                     <div className="habilidade">
                         {projeto.tecnologias.map((item: TecnologiasItemType, i) => (
@@ -49,7 +51,7 @@ function ProjetoDetalhes() {
             </div>
         </div>
         <div className="row">
-            <div className="col-6 text-center mb-3">
+            <div className="col-6 text-center mb-4">
                 <Card style={{ maxWidth: '95%' }}>
                     <>
                         <h2 className="text-2xl heading-main text-primary">Escopo</h2>
@@ -59,7 +61,7 @@ function ProjetoDetalhes() {
                     </>
                 </Card> 
             </div>
-            <div className="col-6 text-center mb-3">
+            <div className="col-6 text-center mb-4">
                 <Card style={{ maxWidth: '95%' }}>
                 <>
                     <h2 className="text-2xl heading-main text-primary">Principais Recursos</h2>

@@ -32,7 +32,7 @@
     /* Fontes */
     --font-sm: 0.875rem; /* 14px */
     --font-md: 1rem;     /* 16px */
-    --font-lg: 1.15rem;  /* 20px */
+    --font-lg: 1.25rem;  /* 20px */
     --font-xl: 1.5rem;   /* 24px */
     --font-2xl: 2rem;    /* 32px */
     --font-3xl: 2.5rem;  /* 56px */
@@ -42,10 +42,19 @@
     --padding: 10rem;
     --padding-sm: 1rem;
     --menu-height: 15vh;
+    /* Icones */
     --icon-md-h: 30px;
     --icon-md-w: 40px;
     --icon-lg-h: 40px;
     --icon-lg-w: 50px;
     --icon-xl-h: 60px;
     --icon-xl-w: 70px;
+    /* Margens */
+    --tamanho-1: 0.25rem; /* 4px */
+    --tamanho-2: 0.5rem;  /* 8px */
+    --tamanho-3: 0.75rem; /* 12px */
+    --tamanho-4: 1rem;    /* 16px */
+    --tamanho-5: 1.5rem;  /* 24px */
+    --tamanho-6: 3rem;    /* 48px */
+    --tamanho-7: 5rem;    /* 80px */
 }

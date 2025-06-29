@@ -19,7 +19,7 @@ const ProjectCard = ({ image, title, description, detailsLink }: Props) => {
                 <h3 className={styles.cardTitle}>{title}</h3>
                 <p className={styles.cardDescription}>{description}</p>
                 <div className={styles.cardLinks}>
-                    <Botao href={detailsLink} className="btn-primary" asLink>
+                    <Botao href={detailsLink} className="btn-primary" asLink size="medio">
                         <span>+ Detalhes</span>
                     </Botao>
                 </div>

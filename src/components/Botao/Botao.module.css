@@ -1,10 +1,17 @@
-.btn-primary {
+.btn-primary,
+.btn-secondary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--tamanho-2);
     border: 2px solid var(--primary);
-    background-color: transparent;
-    padding: 8px 16px;
+    border-radius: var(--tamanho-2);
     color: var(--gray100);
-    border-radius: 8px;
     text-decoration: none;
+}
+
+.btn-primary {
+    background-color: transparent;
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
@@ -13,19 +20,8 @@
     transform: scale(1.05);
 }
 
-.btn-secondary {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-    border: 2px solid var(--primary);
-    border-radius: 6px;
-    color: var(--gray100);
+.btn-secondary {    
     background-color: transparent;
-    text-decoration: none;
     overflow: hidden;
     transition: color 0.4s ease, border-color 0.4s ease;
 }
@@ -66,4 +62,16 @@
     position: relative;
     z-index: 1;
     transition: stroke 0.4s ease;
+}
+
+.tamanho-pequeno {
+  padding: var(--tamanho-1) var(--tamanho-2);
+}
+
+.tamanho-medio {
+  padding: var(--tamanho-2) var(--tamanho-4);
+}
+
+.tamanho-grande {
+  padding: var(--tamanho-3) var(--tamanho-5);
 }

@@ -10,7 +10,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: var(--tamanho-2);
     transition: transform 0.5s ease;
 }
 
@@ -19,16 +19,16 @@
 }
 
 .cardTitle {
-    font-size: 1.25rem;
-    margin-top: 15px;
+    font-size: var(--font-lg);
+    margin-top: var(--tamanho-4);
     color: var(--secondary);
     font-weight: bold;
 }
 
 .cardDescription {
     color: var(--gray200);
-    font-size: 0.95rem;
-    margin-top: 10px;
+    font-size: var(--font-md);
+    margin-top: var(--tamanho-4);
     line-height: 1.4;
 }
 
