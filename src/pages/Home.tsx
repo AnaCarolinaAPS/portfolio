@@ -1,7 +1,6 @@
-import { NavLink } from 'react-router-dom';
 import Computer from '../assets/computer.png';
 import resumoData from '../data/resumo';
-import type { ResumoDataType } from '../data/resumo';
+// import type { ResumoDataType } from '../data/resumo';
 import habilidadeData from '../data/habilidades';
 import type { HabilidadeDataType } from '../data/habilidades';
 import type { TecnologiasItemType } from '../data/habilidades';
@@ -10,12 +9,13 @@ import type { ContatoItemType } from '../data/sobremim';
 import projetosData from '../data/projetos'; // ou o caminho correto
 import type { ProjetosDataType } from '../data/projetos';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
+import Botao from '../components/Botao/Botao.tsx';
 
 function Home() {
 
     const paragrafos: string[] = sobremimData.resumo.split('\n');
     const projetosDestaque = projetosData.slice(0, 3); // Coleção dos 3 primeiros projetos (DESTAQUE)
-    const dados: ResumoDataType = resumoData;
+    // const dados: ResumoDataType = resumoData;
     
     return (
         <> 
@@ -43,27 +43,29 @@ function Home() {
                 </div>
                 <div className="row">
                     <div className="col-12 align-center">
-                        <a href={sobremimData.linkcv} download="Ana-CV.pdf" className="btn-download">
-                            <span>Baixar CV</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
-                                <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
-                                <path d="M17 18h2" />
-                                <path d="M20 15h-3v6" />
-                                <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
-                            </svg>
-                        </a>
+                        <Botao href={sobremimData.linkcv} className="btn-secondary" newTab>
+                            <>
+                                <span>Baixar CV</span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                    <path d="M17 18h2" />
+                                    <path d="M20 15h-3v6" />
+                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                </svg>
+                            </>
+                        </Botao>
                     </div>
                 </div>
                 <div className="row mt-4">
@@ -91,7 +93,7 @@ function Home() {
                         <div className="col-6 habilidade">
                             {hab.itens.map((item: TecnologiasItemType, i) => (
                                 <div key={i} className="habilidade-kit">
-                                    <img src={item.icone} alt={item.nome} className="habilidade-icon mb-1" />
+                                    <img src={item.icone} alt={item.nome} className="icon-xl mb-1" />
                                     <span>{item.nome}</span>
                                 </div>
                             ))}
@@ -108,27 +110,24 @@ function Home() {
                 </div>
 
                 <div className="row text-center">
-                    {projetosDestaque.map((proj: ProjetosDataType) => (
-                        <div className="col-4 mb-4">
-                        <ProjectCard
-                            key={proj.id}
-                            image={proj.imagem}
-                            title={proj.titulo}
-                            description={proj.resumo}
-                            detailsLink={`/projects/${proj.id}`}
-                        />
+                    {projetosDestaque.map((proj: ProjetosDataType, index: number) => (
+                        <div className="col-4 mb-4" key={index}>
+                            <ProjectCard
+                                key={proj.id}
+                                image={proj.imagem}
+                                title={proj.titulo}
+                                description={proj.resumo}
+                                detailsLink={`/projects/${proj.id}`}
+                            />
                         </div>
                     ))}   
                 </div>
 
                 <div className="row text-center mt-3 mb-5">
                     <div className="col-12">
-                        <NavLink 
-                            to="/projetos" 
-                            className="btn-download" 
-                        >
+                        <Botao href="/projetos" className="btn-secondary" asLink>
                             <span>Todos os Projetos</span>
-                        </NavLink>
+                        </Botao>
                     </div>
                 </div>
             </section>
