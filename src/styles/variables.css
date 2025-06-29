@@ -21,14 +21,22 @@
     --background-color-darker: #030617;
     --background-header: rgba(6, 11, 39, 0.1);
     --background-hamburguer: rgba(6, 11, 39, 0.95);
-    --primary-rgb-50: rgba(0, 216, 255, 0.5);
-    --secondary-rgb-50: rgba(240, 98, 146, 0.5);
     --primary-rgb-10: rgba(0, 216, 255, 0.1);
     --secondary-rgb-10: rgba(240, 98, 146, 0.1);
     --terceary-rgb-10: rgba(197, 98, 240, 0.1);
     --primary-rgb-15: rgba(0, 216, 255, 0.15);
     --secondary-rgb-15: rgba(240, 98, 146, 0.15);
     --terceary-rgb-15: rgba(197, 98, 240, 0.15);
+    --primary-rgb-50: rgba(0, 216, 255, 0.5);
+    --secondary-rgb-50: rgba(240, 98, 146, 0.5);
+    --terceary-rgb-50: rgba(197, 98, 240, 0.50);
+    --primary-rgb-100: rgba(0, 216, 255, 1);
+    --secondary-rgb-100: rgba(240, 98, 146, 1);
+    --terceary-rgb-100: rgba(197, 98, 240, 1);
+    --secondary-lighter-rgb-100: rgba(247, 146, 180, 1);
+    --secondary-darker-rgb-100: rgba(245, 60, 138, 1);
+    
+    
     /* Fontes */
     --font-sm: 0.875rem; /* 14px */
     --font-md: 1rem;     /* 16px */
