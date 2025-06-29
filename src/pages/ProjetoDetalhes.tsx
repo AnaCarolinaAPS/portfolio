@@ -31,14 +31,12 @@ function ProjetoDetalhes() {
                         </Botao>
                     ))} 
                 </div>
-
                 <div className="row mt-3 mb-3">
-                    <h2 className="text-xl text-secondary mb-3">Tecnologias</h2>
+                    <h2 className="text-xl text-secondary mb-3 mr-3">Tecnologias</h2>
                     <div className="habilidade">
                         {projeto.tecnologias.map((item: TecnologiasItemType, i) => (
-                            <div key={i} className="habilidade-kit">
-                                <img src={item.icone} alt={item.nome} className="habilidade-icon mb-1" />
-                                <span>{item.nome}</span>
+                            <div key={i} className="ml-2">
+                                <img src={item.icone} alt={item.nome} className="icon-lg mb-1" />
                             </div>
                         ))}
                     </div>
