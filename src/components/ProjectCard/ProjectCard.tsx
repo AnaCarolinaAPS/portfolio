@@ -11,7 +11,7 @@ type Props = {
 
 const ProjectCard = ({ image, title, description, detailsLink }: Props) => {
     return (
-        <Card>
+        <Card style={{ maxWidth: '95%' , height: '100%'}}>
             <div className={styles.cardContent}>
                 <div className={styles.cardImage}>
                     <img src={image} alt={title} />

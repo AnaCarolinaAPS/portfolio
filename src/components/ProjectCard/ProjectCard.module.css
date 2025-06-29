@@ -1,7 +1,9 @@
 .cardContent {
-    position: relative;
-    padding: 10px;
-    z-index: 2;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* se quiser mais controle */
 }
 
 .cardImage img {
@@ -34,5 +36,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: auto; /* força para base */
+    padding-bottom: 20px;
 }
