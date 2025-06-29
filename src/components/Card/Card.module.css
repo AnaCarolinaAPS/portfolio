@@ -1,3 +1,11 @@
+.card,
+.cardInner,
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .card {    
     max-width: 100%;
     margin: 0px 5px;
@@ -15,6 +23,7 @@
 
 .cardInner {
     position: relative;
+    height: 100%;
 }
 
 .cardOverlay {
@@ -41,18 +50,3 @@
     padding: 20px;
     z-index: 2;
 }
-
-/* .cardButton {
-    border: 2px solid var(--primary);
-    background-color: transparent;
-    padding: 8px 16px;
-    color: var(--gray100);
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.cardButton:hover {
-    background: var(--primary-rgb-10);
-    transform: scale(1.05);
-} */
