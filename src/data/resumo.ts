@@ -8,7 +8,7 @@ export interface ResumoDataType {
 const resumoData: ResumoDataType = {
     nome: "Ana Carolina dos Anjos",
     profissao: "Desenvolvedora Full Stack",
-    resumo: "Desenvolvedora Full Stack com experiência em sistemas ERP e vitrines virtuais, com forte atuação em PHP (Laravel) e bancos de dados MySQL. Atualmente ampliando conhecimentos em frameworks modernos como React e Vue.js para retomar atuação na área de programação.",
+    resumo: "Uma desenvolvedora com experiência em construção de sistemas gestão e vitrines virtuais, com forte atuação em PHP (Laravel) e bancos de dados MySQL. Atualmente ampliando conhecimentos em frameworks Frontend como React e Vue.js.",
     email: "anacarolinaapv@gmail.com",
 };
 
