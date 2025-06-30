@@ -24,6 +24,11 @@
     padding: 0px 15px;
 }
 
+.skills {
+    display: flex;  
+    text-align: center; 
+}
+
 .icon-lg {
     max-width: 100%;
     width: var(--icon-lg-w);

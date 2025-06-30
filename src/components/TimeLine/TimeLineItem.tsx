@@ -16,7 +16,7 @@ export default function TimelineItem({ data, isLeft }: Props) {
         <Card style={{ maxWidth: '95%' , height: '100%', textAlign: 'center'}}>
             <>
             <h3 className={styles.jobTitle}>{data.funcao}</h3>
-            <h4 className={styles.company}>{data.empresa}</h4>
+            <p className={styles.company}>{data.empresa}</p>
             <span className={styles.period}>{data.ano}</span>
             <ul className={styles.descriptionList}>
                 {data.descricao.map((exp: DescricaoJobType, index: number) => (
