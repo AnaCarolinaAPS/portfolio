@@ -4,10 +4,21 @@ export interface ContatoItemType {
     icone: string;
 }
 
+export interface TeconologiasDataType {
+    nome: string;
+    icone: string;
+}
+
+export interface SkillsDataType {
+    nivel: string;
+    tecnologias: TeconologiasDataType[];
+}
+
 export interface SobremimDataType {
     resumo: string;
     linkcv: string;
     itens: ContatoItemType[];
+    skills: SkillsDataType[];
 }
 
 const sobremimData: SobremimDataType = {
@@ -18,7 +29,33 @@ const sobremimData: SobremimDataType = {
         { nome: "github", link:"https://github.com/AnaCarolinaAPS", icone: "/assets/icons/brand-github.svg" },
         { nome: "email", link:"mailto:anacarolinapv@gmail.com", icone: "/assets/icons/mail.svg" },
         { nome: "whatsapp", link:"https://wa.me/555180194413", icone: "/assets/icons/brand-whatsapp.svg" },
-    ]          
+    ],
+    skills: [
+        {
+            nivel: "Intermediário",
+            tecnologias: [
+                { nome: "React", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+                { nome: "Bootstrap", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+                { nome: "Vue.js", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
+            ]
+        },
+        {
+            nivel: "Básico",
+            tecnologias: [
+                { nome: "React", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+                { nome: "Bootstrap", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+                { nome: "Vue.js", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
+            ]
+        },
+        {
+            nivel: "Estudando",
+            tecnologias: [
+                { nome: "React", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+                { nome: "Bootstrap", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+                { nome: "Vue.js", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
+            ]
+        }
+    ]
 };
 
 export default sobremimData;
