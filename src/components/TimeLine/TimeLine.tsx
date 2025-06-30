@@ -1,4 +1,4 @@
-import styles from "./Timeline.module.css";
+import styles from "./TimeLine.module.css";
 import type { ExperienciasDataType } from '../../data/experiencias';
 import TimelineItem from "./TimeLineItem";
 
