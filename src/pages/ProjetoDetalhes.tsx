@@ -14,6 +14,8 @@ function ProjetoDetalhes() {
         return <h2>Projeto não encontrado</h2>;
     }
 
+    const paragrafos: string[] = projeto.descricao.split('\n');
+
     return (
         <> 
         <div className="row">
@@ -51,28 +53,32 @@ function ProjetoDetalhes() {
             </div>
         </div>
         <div className="row">
-            <div className="col-6 text-center mb-4">
-                <Card style={{ maxWidth: '95%' }}>
-                    <>
-                        <h2 className="text-2xl heading-main text-primary">Escopo</h2>
-                        <p className="text-lg">
-                            {projeto.descricao}
-                        </p>
-                    </>
-                </Card> 
-            </div>
-            <div className="col-6 text-center mb-4">
-                <Card style={{ maxWidth: '95%' }}>
-                <>
-                    <h2 className="text-2xl heading-main text-primary">Principais Recursos</h2>
-                    {projeto.recursos.map((item: RecursosItemType, i) => (
-                        <p key={i} className="text-lg">
-                            {item.descricao}
-                        </p>
-                    ))}    
-                </>
-            </Card> 
-            </div>
+            {projeto.descricao?.trim() && (
+                <div className="col-6 text-center mb-4">
+                    <Card style={{ maxWidth: '95%' }}>
+                        <>
+                            <h2 className="text-2xl heading-main text-primary">Escopo</h2>
+                            {paragrafos.map((paragrafo: string, index: number) => (
+                                <p key={index} className="text-md text-center">{paragrafo}</p>
+                            ))}
+                        </>
+                    </Card> 
+                </div>
+            )}
+            {projeto.recursos?.length > 0 && (
+                <div className="col-6 text-center mb-4">
+                    <Card style={{ maxWidth: '95%' }}>
+                        <>
+                            <h2 className="text-2xl heading-main text-primary">Principais Recursos</h2>
+                            {projeto.recursos.map((item: RecursosItemType, i) => (
+                                <span key={i} className="text-lg mb-3">
+                                    {item.descricao}
+                                </span>
+                            ))}    
+                        </>
+                    </Card> 
+                </div>
+            )}
         </div>
         </>
     );
