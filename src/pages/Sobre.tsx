@@ -39,7 +39,7 @@ function Sobre() {
                                 <>
                                     <h3 key={index} className="text-lg text-secondary">{educacao.curso}</h3>
                                     <span className="text-md">{educacao.local}</span>
-                                    <span className="text-sm text-primary mb-3">{educacao.ano}</span>
+                                    <span className="text-sm text-primary mb-5">{educacao.ano}</span>
                                 </>
                             ))}
                         </>
@@ -52,7 +52,7 @@ function Sobre() {
                             {sobremimData.skills.map((skill: SkillsDataType, index: number) => (
                                 <>
                                     <h3 key={index} className="text-lg text-secondary">{skill.nivel}</h3>
-                                    <div className="skills">
+                                    <div className="skills mb-5">
                                         {skill.tecnologias.map((tecnologias: TeconologiasDataType, i: number) => (                                        
                                             <>
                                                 <img key={i} src={tecnologias.icone} alt={tecnologias.nome} className="icon-lg mb-1" />
