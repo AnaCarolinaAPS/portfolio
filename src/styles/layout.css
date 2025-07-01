@@ -36,9 +36,9 @@
 }
 
 /* 🔽 Em telas menores que 768px, as colunas ocupam 100% */
-@media (max-width: 767px) {
+@media (max-width: 640px) {
     .col-6 {
-        width: 100%;
+        flex: 0 0 100%;
     }
     .col-4 {
         flex: 0 0 100%; /* Empilha os cards em telas pequenas */
@@ -47,5 +47,29 @@
         padding-top: 15vh !important;
         padding-left: var(--padding-sm);
         padding-right: var(--padding-sm);
+    }   
+}
+
+/* 🔽 Em telas menores que 768px, as colunas ocupam 100% */
+@media (max-width: 768px) {
+    .col-6 {
+        flex: 0 0 100%;
+    }
+    .col-4 {
+        flex: 0 0 100%; /* Empilha os cards em telas pequenas */
+    }
+    .container {
+        padding-top: 15vh !important;
+        padding-left: var(--padding-sm);
+        padding-right: var(--padding-sm);
+    }
+}
+
+/* 🔽 Em telas menores que 768px, as colunas ocupam 100% */
+@media (max-width: 1024px) {
+    .container {
+        padding-top: 15vh !important;
+        padding-left: var(--padding-md);
+        padding-right: var(--padding-md);
     }
 }
