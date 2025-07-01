@@ -89,7 +89,6 @@ const projetosData: ProjetosDataType[] = [
             { nome: "Wordpress", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" },
         ],
         recursos: [
-            { descricao: "." },
         ],
         links: [
             { text: "Visitar", href: "https://edtpy.com/", icone: "#" },
@@ -99,18 +98,15 @@ const projetosData: ProjetosDataType[] = [
         id: "coexma",
         titulo: "Coexma",
         status: "Finalizado",
-        imagem: "/assets/images/capacit.png", 
+        imagem: "/assets/images/coexma.png", 
         resumo: "Loja de cadeiras e móveis de escritório, construído em wordpress.",
-        descricao: ".",
+        descricao: "",
         tecnologias: [
             { nome: "PHP", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" },
             { nome: "CSS", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
             { nome: "Wordpress", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" },
         ],
         recursos: [
-            { descricao: "." },
-            { descricao: "." },
-            { descricao: "." },
         ],
         links: [
             { text: "Visitar", href: "https://coexma.com.py/", icone: "#" },
@@ -120,7 +116,7 @@ const projetosData: ProjetosDataType[] = [
         id: "novaelectronicos",
         titulo: "NovaElectronicos",
         status: "Finalizado",
-        imagem: "/assets/images/capacit.png", 
+        imagem: "/assets/images/no-image.png", 
         resumo: "Vitrine virtual de produtos eletrônicos responsiva.",
         descricao: "Trabalhei como desenvolvedora FullStack nesse projeto, o projeto foi desenvolvido com Backend PHP (Laravel) e Frontend Bootstrap e componentes VueJs. O projeto conta com painel administrativo baseado no template AdminLTE, e possui controle de produtos, usuários, categorias, sendo possível adicionar os icones de categorias e as fotos dos produtos.",
         tecnologias: [
@@ -132,31 +128,31 @@ const projetosData: ProjetosDataType[] = [
         recursos: [
             { descricao: "Autenticação de usuários;" },
             { descricao: "Controle de produtos e categorias com fotos;" },
-            { descricao: "Design responsivo para desktop, tablet e celular." },
+            // { descricao: "Design responsivo para desktop, tablet e celular." },
         ],
         links: [
-            { text: "Git Hub", href: "https://github.com/AnaCarolinaAPS/powertradesys", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+            { text: "Git Hub", href: "https://github.com/AnaCarolinaAPS/nova", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
         ],
     },
     {
         id: "votacao",
         titulo: "Votacao",
         status: "Finalizado",
-        imagem: "/assets/images/capacit.png", 
-        resumo: "Sistema para uma escola de informática com controle de alunos, turmas e pagamentos.",
-        descricao: "Desenvolvedora Full Stack com experiência em sistemas ERP e vitrines virtuais, com forte atuação em PHP (Laravel) e bancos de dados MySQL. Atualmente ampliando conhecimentos em frameworks modernos como React e Vue.js para retomar atuação na área de programação.",
+        imagem: "/assets/images/votacion.png", 
+        resumo: "Sistema para controle de assistencia para votação com controle de zonas e locais.",
+        descricao: "Trabalhei como desenvolvedora FullStack nesse projeto, o projeto foi desenvolvido com Backend PHP (Laravel) e Frontend Bootstrap e template AdminLte. O projeto consistia no cadastro de pessoas, zonas eletorais e locais. Servia para controle de quantidade de votos e para que o cliente pudesse cobrar os líderes de cada sessão a convocarem pessoas para votarem. Projeto contava com um gráfico de votantes x ausentes.",
         tecnologias: [
             { nome: "PHP (Laravel)", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
             { nome: "Bootstrap", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
             { nome: "MySql", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
         ],
         recursos: [
-            { descricao: "User Auth - Sign up/sign in via Firebase email/password authentication." },
-            { descricao: "Dashboard - Simple, intuitive interface for managing interviews." },
-            { descricao: "Fully responsive design across desktop, tablet, and mobile" },
+            { descricao: "Autenticação de usuários;" },
+            { descricao: "Registro de votantes;" },
+            { descricao: "Gráfico Votantes x Ausentes;" },
+            { descricao: "Design responsivo para desktop, tablet e celular." },
         ],
         links: [
-            { text: "Git Hub", href: "https://github.com/AnaCarolinaAPS/powertradesys", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
         ],
     },
 ];
