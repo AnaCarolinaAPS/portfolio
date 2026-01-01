@@ -15,7 +15,7 @@ type Props = {
     fontSize?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl',
 }
 
-export const DivContainer = ({ children, fontSize, margin='0', padding='0', backgroundColor='transparent', width = '100%', height = 'auto', display = 'flex', alignItems = 'flex-start', justifyContent = 'flex-start', flexDirection='row', gap='' }: Props) => {
+export const DivContainer = ({ children, fontSize='md', margin='0', padding='0', backgroundColor='transparent', width = '100%', height = 'auto', display = 'flex', alignItems = 'flex-start', justifyContent = 'flex-start', flexDirection='row', gap='' }: Props) => {
     return (
         <DivElement
             $width={width}
