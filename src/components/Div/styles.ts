@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const DivElement = styled.div<{ $width: string, $height: string, $fontSize: string,  $display: string, $alignItems: string, $justifyContent: string, $flexDirection: string, $gap: string, $backgroundColor: string, $margin: string, $padding: string }>`
-    width: ${props => props.$width};
-    height: ${props => props.$height};
+    width: ${({ $width }) => $width ?? 'auto'};
+    height: ${({ $height }) => $height ?? 'auto'};
     display: ${props => props.$display};
     align-items: ${props => props.$alignItems};
     justify-content: ${props => props.$justifyContent};
