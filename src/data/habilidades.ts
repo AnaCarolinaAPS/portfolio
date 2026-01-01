@@ -35,7 +35,7 @@ const habilidadeData: HabilidadeDataType[] = [
         categoria: "Ferramentas",
         itens: [
             { nome: "VSCode", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
-            { nome: "Git", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" },
+            { nome: "Git", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
             { nome: "Docker", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
         ]
     }

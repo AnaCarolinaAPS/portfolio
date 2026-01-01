@@ -1,25 +1,27 @@
-import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Inicio from './pages/Home';
-import Sobre from './pages/Sobre';
-import Projetos from './pages/Projetos';
-import ProjetoDetalhes from './pages/ProjetoDetalhes';
-import Header from './components/Header/Header';
+import { useTheme } from './hooks/theme';
+import { useEffect } from 'react';
+import { ThemeProvider } from "styled-components";
+import { lightTheme } from "./themes/lightTheme";
+import { darkTheme } from "./themes/darkTheme";
+import { MainRoutes } from './routes';
+import { GlobalStyles } from './themes/GlobalStyles';
 
 function App() {
-  return (
-    <Router>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/projetos" element={<Projetos />} />
-          <Route path="/projects/:id" element={<ProjetoDetalhes />} />
-        </Routes>
-      </div>
-    </Router>
-  )
+  const { handleInitTheme, theme } = useTheme()
+    
+    useEffect(() => {
+        // Apply theme saved by user to local storage
+        handleInitTheme()
+    }, [])
+    
+    return (
+        <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
+            <GlobalStyles />
+            <MainRoutes>
+                
+            </MainRoutes>
+        </ThemeProvider>
+    )
 }
 
 export default App
