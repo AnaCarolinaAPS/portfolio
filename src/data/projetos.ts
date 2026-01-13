@@ -53,6 +53,31 @@ const projetosData: ProjetosDataType[] = [
         ],
     },
     {
+        id: "vitrine-virtual-azul",
+        titulo: "Vitrine Virtual Azul",
+        status: "Entregue em 07/2020",
+        imagem: "/assets/images/vitrine-virtual-azul.png", 
+        resumo: "Vitrine virtual com a finalidade de exibir produtos e direcionar interessados ao chat whatsapp da loja.",
+        descricao: "Trabalhei como desenvolvedora freelance FullStack, apresentando orçamento, criando os conceitos, banco de dados e estrutura do projeto. O projeto foi desenvolvido para atender uma empresa do ramo de produtos para casa, como móveis e elêtronicos. \nA ideia era um catálogo de produtos onde os clientes pudessem visualizar produtos e promoções, e pudessem entrar em contato com o whatsapp da loja para saber mais informações. Por esse motivo, foi criada uma vitrine virtual em PHP (sem frameworks), Banco de dados MySQL, Bootstrap e bibliotecas javascript como OwlCarousel2, DateRangePicker, dataTables e boostrap-datepicker.",
+        tecnologias: [
+            { nome: "PHP", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+            { nome: "Bootstrap", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+            { nome: "MySql", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+        ],
+        recursos: [
+            { descricao: "Autenticação de usuários;" },
+            { descricao: "Carrossel de imagens tipo Banner;" },
+            { descricao: "Catálogo de Produtos com filtros por categorias e buscas por nome;" },
+            { descricao: "Criação de Promoções com preços diferenciado;" },
+            { descricao: "Botões Saiba Mais com redirecionamento para o whatsapp com a informação do produto;" },
+            { descricao: "Relatório de visualizações das páginas (produtos mais vistos e etc);" },
+        ],
+        links: [
+            { text: "Demonstração", href: "http://vitrine-virtual-azul.anadosanjos.com/", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+            { text: "Git Hub", href: "https://github.com/AnaCarolinaAPS/vitrine-virtual-azul", icone: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+        ],
+    },
+    {
         id: "capacit",
         titulo: "Capacit",
         status: "Em Andamento",
