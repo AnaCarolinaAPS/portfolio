@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const ButtonLinkElement = styled.div<{ $style: string, $borderRadius: string, $size: string, $width: string }>`
+export const ButtonLinkElement = styled.a<{ $style: string, $borderRadius: string, $size: string, $width: string }>`
     width: ${props => props.$borderRadius == 'rounded' ? (props.$size == 'sm' ? '40px' : '48px') : props.$width};
     height: ${props => props.$borderRadius == 'rounded' && (props.$size == 'sm' ? '40px' : '48px')};
     border: 2px solid ${props => props.theme.COLORS.primary};
@@ -12,6 +12,12 @@ export const ButtonLinkElement = styled.div<{ $style: string, $borderRadius: str
     align-items: center;
     padding: .5rem 1rem;
 
+    display: inline-flex;
+    color: inherit;
+    gap: .5rem;
+    text-decoration: none;
+    font-weight: bold;
+
     background-color: transparent;
     transition: ${props => props.$style == 'primary' ? 'transform 0.4s ease, background 0.4s ease' : 'color 0.4s ease, border-color 0.4s ease'};
     ${props => props.$style == 'primary' ? '' : 'overflow: hidden;'};
@@ -21,13 +27,16 @@ export const ButtonLinkElement = styled.div<{ $style: string, $borderRadius: str
         ${props => props.$style == 'primary' ? 'transform: scale(1.05);' : ''};
         ${props => props.$style == 'primary' ? '' : 'border: 2px solid '+props.theme.COLORS.secondary};               
         ${props => props.$style == 'primary' ? '' : 'color: '+props.theme.COLORS.buttonColor};                   
-        a {
-            z-index: 1;
-        }
+        z-index: 0;
     }
 
     &::before {
         ${props => props.$style == 'secondary' ? 'content: "";' : ''};
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
     }
 
     ${({ $style }) =>
@@ -52,10 +61,6 @@ export const ButtonLinkElement = styled.div<{ $style: string, $borderRadius: str
     }
 
     a {
-        display: inline-flex;
-        color: inherit;
-        gap: .5rem;
-        text-decoration: none;
-        font-weight: bold;
+        
     }
 `

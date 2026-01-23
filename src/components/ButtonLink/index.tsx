@@ -37,11 +37,9 @@ export const ButtonLink = ({ href, children, newTab, asLink = false, width='auto
                 $borderRadius={borderRadius}
                 $width={width}
                 $style={style}
-            >
-                <a href={href} target={newTab ? '_blank' : undefined}
-                    rel={newTab ? 'noopener noreferrer' : undefined} >
-                    {children}
-                </a>
+                href={href} target={newTab ? '_blank' : undefined}
+                rel={newTab ? 'noopener noreferrer' : undefined} >
+                    <span>{children}</span>
             </ButtonLinkElement>
         );
 
