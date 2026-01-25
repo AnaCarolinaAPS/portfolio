@@ -9,7 +9,7 @@ export const lightTheme = {
         secondaryBackgroundExtraLight: '#F096BF',
         purple: '#8284FA',
         purpleDark: '#5E60CE',
-        background: '#f5f5ff',
+        background: '#f9fbfd',
         textColor400: '#676e79',
         textColor500: '#336e7b',
         borderColor: '#E2E8F0',
@@ -37,7 +37,7 @@ export const lightTheme = {
         navbarColor: '#e4f1fe',
         navbarBackgroundHover: '#00d8ff',
         scrollbarThumb: '#F06292',
-        scrollbarTrack: '#f5f5ff',
+        scrollbarTrack: '#f9fbfd',
         scrollbarThumbHover: '#F06292',
 
     },
