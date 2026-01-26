@@ -11,10 +11,17 @@ import { ButtonLink } from '../../components/ButtonLink/index.tsx';
 import { HabilidadesIcon, ResponsiveImage, Section } from './styles.ts';
 import { DivContainer } from '../../components/Div/index.tsx';
 import { Icon } from '../../components/Icon/index.tsx';
+import { useEffect, useState } from 'react';
+import { getInformation } from '../../services/requests.ts';
+
+import type { Information } from "../../@types/Information"
+import { ScaleLoader } from 'react-spinners';
+import { Loading } from '../../components/Layout/Content/styles.ts';
+import { useTheme } from 'styled-components';
 
 function Home() {
 
-    const paragrafos: string[] = sobremimData.resumo.split('\n');
+    // const paragrafos: string[] = sobremimData.resumo.split('\n');
     const projetosDestaque = projetosData.slice(0, 3); // Coleção dos 3 primeiros projetos (DESTAQUE)
     
     // Links da Section SOBREMIM
@@ -30,18 +37,52 @@ function Home() {
     const linkedinDados = sobremimData.itens.find(
         item => item.nome === 'linkedin'
     )?.linkContato;
+
+    const [loadingRequest, setLoadingRequest] = useState(true)
+    const theme = useTheme()
+
+    const [information, setInformation] = useState<Information | null>(null)
+
+    const [paragrafos, setParagrafos] = useState<string[]>(null)
+
+    const handleGetInformation = async () => {
+        setLoadingRequest(true)
+        const request = await getInformation('pt-BR')
+
+        if (request.error) {
+            console.log('❌ ERRO:', request.error)
+            return
+        }
+
+        if (request.data?.information) {            
+            const information = request.data.information;
+
+            setInformation(information)
+            setParagrafos(information?.about_me ? information?.about_me.split(/\r?\n/) : [])
+        }
+        setLoadingRequest(false)
+    }
+
+    useEffect(() => {
+        handleGetInformation()
+    }, [])
     
     return (
-        <DivContainer padding='0px 0px 5rem 0px' width='100%'> 
+        <DivContainer padding='0px 0px 5rem 0px' width='100%'>
+            {loadingRequest &&
+                <Loading>
+                    <ScaleLoader color={theme.COLORS.primary} />
+                </Loading>
+            }           
             <Section>
                 <DivContainer alignItems='center'>
                     <>
                         <DivContainer width='50%' alignItems='flex-start' flexDirection='column'>
-                            <h1>Olá! Eu sou a <br/><span className='color-primary'>{resumoData.nome}</span></h1>
-                            <h3 className='color-secondary'>{resumoData.profissao}</h3>
+                            <h1>{information?.headline}<br/><span className='color-primary'>{resumoData.nome}</span></h1>
+                            <h3 className='color-secondary'>{information?.title}</h3>
                             <DivContainer fontSize='lg'>
                                 <p>
-                                    {resumoData.resumo}
+                                    {information?.summary}
                                 </p>
                             </DivContainer>                            
                         </DivContainer>
@@ -61,7 +102,7 @@ function Home() {
                     <>
                         <DivContainer flexDirection='column' alignItems='center' fontSize='lg'>
                             <h2 className='color-primary'>Sobre Mim</h2>
-                            {paragrafos.map((paragrafo: string, index: number) => (
+                            {paragrafos?.map((paragrafo: string, index: number) => (
                                 <p key={index} className="text-justify">{paragrafo}</p>
                             ))}
                         </DivContainer>
